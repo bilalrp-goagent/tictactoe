@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "TicTacToe",
-    "slug": "TicTacToe",
+    "name": "SoonChokdi",
+    "slug": "soonchokdi",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,10 +19,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+
+      },
+      "package": "com.bilalrp.soonchokdi"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7b6283b9-db9a-42a1-9332-798fc82acce4"
+      }
     }
   }
 }

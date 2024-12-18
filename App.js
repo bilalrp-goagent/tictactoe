@@ -1,11 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Image } from "react-native";
+import Tictactoe from "./screens/Tictactoe";
+import { useState } from "react";
+import MainScreen from "./screens/MainScreen";
 
 export default function App() {
+  const [newScreen, setNewScreen] = useState(false);
+  function nextScreen() {
+    setNewScreen(true);
+  }
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+     
+      {newScreen? <Tictactoe />:<MainScreen nextScreen={nextScreen}/>}
     </View>
   );
 }
@@ -13,8 +19,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });
